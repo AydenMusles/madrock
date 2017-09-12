@@ -13,8 +13,6 @@
   <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
   {% endif %}
 
-  {{ 'custom-product-page.scss.css' | asset_url | stylesheet_tag }}
-
   <title>
     {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
@@ -29,7 +27,8 @@
 
   {% include 'fonts' %}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
-
+  {{ 'custom-product-page.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'mobile-menu.scss.css' | asset_url | stylesheet_tag }}
   {% if template contains 'customers' %}
     {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
   {% endif %}
@@ -78,6 +77,7 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.min.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.min.js' | asset_url }}"></script><![endif]-->
 
+
 </head>
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" data-template-directory="{{ template.directory }}" data-template"{{ template.name }}" >
@@ -95,5 +95,6 @@
   </div>
 
   <!-- District v2.3.0 -->
+ <script src="{{ 'custom.js' | asset_url }}"></script>
 </body>
 </html>

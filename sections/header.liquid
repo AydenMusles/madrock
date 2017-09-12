@@ -37,6 +37,7 @@
           <nav class="nav-bar" role="navigation">
             {% include 'site-nav' %}
           </nav>
+
         </div>
 
       </div>
@@ -57,6 +58,8 @@
     {% endif %}
   </div>
 </nav>
+
+  {% include 'mobile-nav' %}
 
 <style>
   {% if section.settings.top_bar_full_width %}
