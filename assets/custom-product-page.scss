@@ -3,6 +3,7 @@
 .selection-wrapper {
     button.button {
         background-color: #ff7300
+        transition: background-color 200ms ease-in-out;
     }
 }
 
