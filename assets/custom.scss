@@ -1,0 +1,64 @@
+$orange: #d3531a;
+
+//FONT
+@import url('https://fonts.googleapis.com/css?family=Raleway: 400,700');
+
+h1, .h1, header.site-header div.site-logo, h2, .h2, .section-standard header h4, .section-standard header .h4, .instagram-collection header h4, .instagram-collection header .h4, h3, .h3, h4, .h4, h5, .h5, h6, .h6, a, p, li, strong {
+    font-family: 'Raleway', sans-serif;
+}
+
+//button large outline
+.button.outline, p.buttons.outline>a, .hero a.button, .slide__item-content a.button {
+    &:hover {
+        color: $orange;
+        border: 2px solid $orange;
+    }
+}
+
+//MAIN COLLECTION
+//color for collection buttons upon hover
+#shopify-section-1482294971465 .box .animation-label-overlay:hover figcaption h4 {
+    background-color: $orange;
+    border: 2px solid $orange;
+}
+
+//add to cart button
+.selection-wrapper {
+    button.button {
+        background-color: $orange;
+        transition: background-color 250ms ease-in-out;
+    }
+}
+
+.product-form {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: center;
+}
+
+//product title
+.product-title {
+    width: 58%;
+}
+
+// .purchase-box .selection-wrapper.price>span {
+//     color: #000000;
+// }
+
+.purchase-box .selection-wrapper.price {
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    span {
+        color: #000000;
+    }
+}
+
+//quantity
+.purchase-box .selection-wrapper.variant select {
+    width: auto;
+}

@@ -1,3 +1,15 @@
+$orange: #d3531a;
+
+//color for navigation
+header.site-header nav.nav-bar ul.site-nav li a {
+    color: $orange;
+}
+
+.site-nav a {
+    color: $orange;
+    text-decoration: none;
+}
+
 .hamburger {
   width: 60px;
   height: 45px;
@@ -58,7 +70,7 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: rgba(#000000, 0.8);
+    background-color: rgba(#000000, 1);
     overflow: hidden;
     transition: width 500ms
 }
@@ -79,6 +91,29 @@
 .mobile-menu__content--active {
     opacity: 1;
     transition: opacity 200ms
+}
+
+.dropdown {
+    margin-left: 10px;
+}
+
+.has-dropdown > .dropdown {
+    display: none;
+}
+
+.has-dropdown:hover > .dropdown {
+    display: block;
+}
+.has-dropdown > a {
+    pointer-events: none;
+    cursor: default;
+}
+
+.site-nav li {
+    margin: 10px 0 10px 0
+    a {
+        text-decoration: none;
+    }
 }
 
 @media (hover: hover) {
